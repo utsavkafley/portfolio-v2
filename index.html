@@ -8,17 +8,67 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="" portfolio-nav>
-      <div class="logo">Utsav Kafley</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">about</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#resume">resume</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <img src="assets/logo.png" alt="" />
+        </div>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        <img class="photo" src="assets/web-developer.svg" alt="" />
+        <div class="greeting">
+          <div class="greeting-text">
+            <p>Hello, I'm</p>
+            <h1 class="title">Utsav Kafley</h1>
+            <p>Frontend Developer</p>
+          </div>
+          <div class="greeting-toolbar">
+            <div class="greeting-buttons">
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/Utsav_Kafley_Resume.pdf')"
+              >
+                Resume
+              </button>
+              <button
+                class="btn btn-color-1"
+                onclick="location.href='./#contact'"
+              >
+                Contact
+              </button>
+            </div>
+            <div class="greeting-links">
+              <img
+                src="./assets/linkedin.png"
+                alt="Utsav Kafley LinkedIn Profile"
+                class="greeting-dev-icons { height: 40px; }"
+                onclick="window.open('https://www.linkedin.com/in/utsav-kafley/')"
+                ,
+                _blank)
+              />
+              <img
+                src="./assets/github.png"
+                alt="Utsav Kafley Github"
+                class="greeting-dev-icons { height: 40px; }"
+                onclick="window.open('https://github.com/utsavkafley')"
+                ,
+                _blank)
+              />
+            </div  v>
+          </div>
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>

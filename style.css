@@ -17,47 +17,118 @@ p {
   color: rgb(85, 85, 85);
 }
 
-/* PROJECT NAVIGATION */
-nav,
-.nav-links {
+.container {
+  /* border: 10px solid black; */
+}
+
+/************************* HEADER **********************/
+
+header {
+  /* border: 4px solid red; */
   display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+}
+
+header .logo {
+  /* border: 2px solid blue; */
+}
+
+.logo img {
+  height: 10vh;
 }
 
 nav {
-  justify-content: space-around;
-  align-items: center;
-  height: 17vh;
-  font-family: "Lato", sans-serif;
+  /* border: 2px solid purple; */
+  display: flex;
+  align-items: flex-end;
 }
 
 .nav-links {
-  gap: 2rem;
+  display: flex;
   list-style: none;
-  font-size: 1.5rem;
+  gap: 20px;
+  font-size: 1.4rem;
 }
-a {
-  color: black;
+
+.nav-links li {
   text-decoration: none;
-  text-decoration-color: white;
+
+  /* padding: 10px; */
 }
 
-a:hover {
-  color: gray;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+.nav-links a {
+  text-decoration: none;
+  color: rgb(60, 60, 60);
+  border-bottom: 2px solid rgb(60, 60, 60);
 }
 
-.logo {
-  font-size: 3rem;
+/************************* SECTION **********************/
+section {
+  /* border: 4px solid cyan; */
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
 }
 
-.logo:hover {
-  cursor: default;
+.photo {
+  /* border: 2px solid blue; */
+  height: 80vh;
 }
 
-/* PROJECT TRANSITIONS */
-a,
-.btn {
-  transition: all 300ms ease;
+/* **********GREETING****************** */
+.greeting {
+  /* border: 2px solid purple; */
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: purple;
+}
+
+.greeting p {
+  font-size: 2.5rem;
+}
+
+.greeting h1 {
+  font-size: 4.5rem;
+}
+
+.greeting-text {
+  /* border: 2px solid steelblue; */
+  border-bottom: 1px solid rgb(60, 60, 60);
+  margin-bottom: 20px;
+}
+
+.greeting-toolbar {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.greeting-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.greeting-buttons button {
+  background-color: rgb(60, 60, 60);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: whitesmoke;
+  font-size: medium;
+}
+
+.greeting-links {
+  /* border: 2px solid red; */
+  display: flex;
+  gap: 2px;
+}
+
+.greeting-dev-icons {
+  height: 40px;
 }
