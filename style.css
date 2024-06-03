@@ -17,10 +17,6 @@ p {
   color: rgb(85, 85, 85);
 }
 
-.container {
-  /* border: 10px solid black; */
-}
-
 /************************* HEADER **********************/
 
 header {
@@ -39,13 +35,13 @@ header .logo {
   height: 10vh;
 }
 
-nav {
+.nav-links {
   /* border: 2px solid purple; */
   display: flex;
   align-items: flex-end;
 }
 
-.nav-links {
+.nav-links ul {
   display: flex;
   list-style: none;
   gap: 20px;
@@ -62,6 +58,30 @@ nav {
   text-decoration: none;
   color: rgb(60, 60, 60);
   border-bottom: 2px solid rgb(60, 60, 60);
+}
+
+/* HAMBURGER NAV */
+.hamburger-nav {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.hamburger-nav div {
+  width: 2rem;
+  height: 0.25rem;
+  background-color: rgb(60, 60, 60);
+  border-radius: 10px;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+}
+
+.hamburger-nav-links {
+  display: none;
+  width: 100%;
 }
 
 /************************* SECTION **********************/
@@ -131,4 +151,82 @@ section {
 
 .greeting-dev-icons {
   height: 40px;
+}
+
+/* ***************************MOBILE********************/
+@media (max-width: 767px) {
+  .container {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .nav-links {
+    display: none;
+  }
+  .hamburger-nav-links {
+    display: none;
+    width: 100%;
+  }
+
+  .hamburger-nav {
+    display: flex;
+  }
+
+  .hamburger-nav-links.show {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .hamburger-nav-links.show ul {
+    position: absolute;
+    list-style: none;
+    text-align: right;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .hamburger-nav-links.show li {
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid rgb(60, 60, 60);
+  }
+
+  .hamburger-nav-links.show a {
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+  }
+
+  section {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .photo {
+    /* size photo to be a portion of screen width */
+    height: 30vh;
+  }
+
+  .greeting {
+    justify-content: flex-start;
+    /* margin: 0 auto; */
+  }
+
+  .greeting-text {
+    width: 100%;
+  }
+  .greeting p {
+    font-size: 1.5rem;
+  }
+
+  .greeting h1 {
+    font-size: 2.5rem;
+  }
 }
