@@ -5,22 +5,37 @@
   padding: 0;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
-p {
-  color: rgb(85, 85, 85);
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--primary-text-color);
+
 }
+
+a{
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  --primary-bg-color: #d3d9d4;
+  --secondary-bg-color: #748d92
+  --primary-accent-color: #124e66;
+  --primary-text-color: #212A31;
+  --secondary-text-color: #2e3944
+  background-color: var(--main-bg-color);
+}
+
 
 /************************* HEADER **********************/
 
 header {
-  /* border: 4px solid red; */
   display: flex;
   justify-content: space-between;
   width: 70%;
@@ -100,12 +115,10 @@ section {
 /* **********GREETING****************** */
 .greeting {
   /* border: 2px solid purple; */
-  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: purple;
 }
 
 .greeting p {
@@ -114,11 +127,11 @@ section {
 
 .greeting h1 {
   font-size: 4.5rem;
+  color: #124e66
 }
 
 .greeting-text {
   /* border: 2px solid steelblue; */
-  border-bottom: 1px solid rgb(60, 60, 60);
   margin-bottom: 20px;
 }
 
@@ -153,11 +166,34 @@ section {
   height: 40px;
 }
 
+/* ****************PROJECTS*************************** */
+
+#project-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.projects-grid {
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.projects-grid div{
+  height: 280px;
+  width: 280px;
+  background-color: #124e66;
+  font-size: 1.4rem;
+  color: #d3d9d4;
+  padding: 20px
+}
+
 /* ***************************MOBILE********************/
 @media (max-width: 767px) {
   .container {
     overflow: hidden;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -216,7 +252,8 @@ section {
 
   .greeting {
     justify-content: flex-start;
-    /* margin: 0 auto; */
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(60, 60, 60);
   }
 
   .greeting-text {
@@ -229,4 +266,13 @@ section {
   .greeting h1 {
     font-size: 2.5rem;
   }
+
+  .projects-grid{
+   grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-grid div{
+    margin: 0 auto;
+    height: auto;
+  };
 }
