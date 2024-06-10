@@ -190,6 +190,7 @@ section {
   padding: 20px
 }
 
+/* **********************CONTACT FORM*********************************** */
 #contact-section {
   display: flex;
   flex-direction: column;
@@ -327,4 +328,12 @@ section {
     margin: 0 auto;
     height: auto;
   };
+
+  .contact-form{
+    width: 100%;
+  }
+
+  .form-button{
+    width: 100%;
+  }
 }
