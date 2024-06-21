@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utsav Kafley</title>
+    <title>Utsav Kafley | Full Stack Web Developer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <script src="script.js"></script>
   </head>
+
   <body>
     <div class="container">
       <header>
-        <div class="logo">
-          <img src="assets/logo.png" alt="" />
-        </div>
         <nav class="nav-links">
           <ul>
             <li><a href="#home">home</a></li>
@@ -21,74 +19,122 @@
             <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
-        <nav class="hamburger-nav">
-          <div></div>
-          <div></div>
-          <div></div>
-        </nav>
       </header>
-      <nav class="hamburger-nav-links">
-        <ul>
-          <li><a href="#home">home</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </nav>
+      <!-- HOME -->
       <section id="home-section">
-        <img class="photo" src="assets/web-developer.svg" alt="" />
-        <div class="greeting">
-          <div class="greeting-text">
-            <p>Hello, I'm</p>
-            <h1 class="title">Utsav Kafley</h1>
-            <p>Frontend Developer</p>
+        <div class="intro">
+          <div class="intro-text">
+            <p>Hello, I'm <span>Utsav</span></p>
+            <p>Software Engineer - Fullstack</p>
           </div>
-          <div class="greeting-toolbar">
-            <div class="greeting-buttons">
-              <button
-                class="btn btn-color-2"
-                onclick="window.open('./assets/Utsav_Kafley_Resume.pdf')"
-              >
-                Resume
-              </button>
-              <button
-                class="btn btn-color-1"
-                onclick="location.href='./#contact'"
-              >
-                Contact
-              </button>
+          <button class="intro-btn">about me</button>
+        </div>
+      </section>
+      <!-- ABOUT ME -->
+      <section id="about-section">
+        <h1>ABOUT ME</h1>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-me-img">
+              <img src="assets/profile.png" alt="utsav" height="200px" />
             </div>
-            <div class="greeting-links">
-              <img
-                src="./assets/linkedin.png"
-                alt="Utsav Kafley LinkedIn Profile"
-                class="greeting-dev-icons { height: 40px; }"
-                onclick="window.open('https://www.linkedin.com/in/utsav-kafley/')"
-                ,
-                _blank)
-              />
-              <img
-                src="./assets/github.png"
-                alt="Utsav Kafley Github"
-                class="greeting-dev-icons { height: 40px; }"
-                onclick="window.open('https://github.com/utsavkafley')"
-                ,
-                _blank)
-              />
-            </div>
+            <p>
+              I specialize in building data-driven, fullstack web applications
+              with a focus on geo-spatial data. I primarily work with React,
+              Javascript, Typescript, JAVA and Python. In my current role I am
+              responsible for:
+            </p>
+            <ul>
+              <li>Frontend React, Typescript, Javascript</li>
+              <li>RESTful APIs, JAVA, OOP, RabbitMQ</li>
+              <li>Map stuff with Leaflet, other map stuff</li>
+              <li>Containerization and Orchestration, docker, Kubernetes</li>
+            </ul>
+          </div>
+          <div class="skills">
+            <ul class="skills-list">
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">Javascript</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">TypeScript</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">React</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">Angular</div>
+              </li>
+
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">Vue</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">Java</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">.NET</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">Kubernetes</div>
+              </li>
+              <li class="hex-grid-item">
+                <div class="hex-grid-content">Python</div>
+              </li>
+              <li>
+                <div class="hex-grid-content">Leaflet</div>
+              </li>
+              <li>
+                <div class="hex-grid-content">postgres</div>
+              </li>
+              <li>
+                <div class="hex-grid-content">OpenLayers</div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
-      <section id="project-section">
+      <!-- PROJECTS -->
+      <section id="projects-section">
         <h1>PROJECTS</h1>
         <div class="projects-grid">
-          <div class="project">Reddit Image Downloader</div>
-          <div>National Parks Finder</div>
-          <div>Tool Library</div>
-          <div>D3 Project</div>
-          <div>Leaflet Project</div>
-          <div>Database Project</div>
+          <div class="project">
+            <img class="project-img" src="./assets/bookish.png" alt="" />
+            <div class="project-shape"></div>
+            <div></div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="./assets/map-project.png" alt="" />
+            <div class="project-shape"></div>
+            <div></div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="./assets/map-project-2.png" alt="" />
+            <div class="project-shape"></div>
+            <div></div>
+          </div>
+          <div class="project">
+            <img
+              class="project-img"
+              src="./assets/chat-application.png"
+              alt=""
+            />
+            <div class="project-shape"></div>
+            <div></div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="./assets/npfinder.png" alt="" />
+            <div class="project-shape"></div>
+            <div></div>
+          </div>
+          <div class="project">
+            <img class="project-img" src="./assets/tool-library.png" alt="" />
+            <div class="project-shape"></div>
+            <div></div>
+          </div>
         </div>
       </section>
+      <!-- contact form -->
       <section id="contact-section">
         <h1>CONTACT FORM</h1>
         <form class="contact-form" action="contact.php" method="post">
@@ -125,8 +171,42 @@
           </div>
           <button class="form-button" type="submit">Submit</button>
         </form>
+        <div class="greeting-toolbar">
+          <div class="greeting-buttons">
+            <button
+              class="btn btn-color-2"
+              onclick="window.open('./assets/Utsav_Kafley_Resume.pdf')"
+            >
+              Resume
+            </button>
+            <button
+              class="btn btn-color-1"
+              onclick="location.href='./#contact'"
+            >
+              Contact
+            </button>
+          </div>
+          <div class="greeting-links">
+            <img
+              src="./assets/linkedin.png"
+              alt="Utsav Kafley LinkedIn Profile"
+              class="greeting-dev-icons { height: 40px; }"
+              onclick="window.open('https://www.linkedin.com/in/utsav-kafley/')"
+              ,
+              _blank)
+            />
+            <img
+              src="./assets/github.png"
+              alt="Utsav Kafley Github"
+              class="greeting-dev-icons { height: 40px; }"
+              onclick="window.open('https://github.com/utsavkafley')"
+              ,
+              _blank)
+            />
+          </div>
+        </div>
       </section>
-      <!-- contact form -->
+      <!-- FOOTER -->
     </div>
     <script src="script.js"></script>
   </body>
