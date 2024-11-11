@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Utsav Kafley | Full Stack Web Developer</title>
+    <title>Utsav Kafley | Software Engineer</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <script src="script.js"></script>
@@ -14,9 +14,9 @@
       <header>
         <nav class="nav-links">
           <ul>
-            <li><a href="#home">home</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
+            <li><a href="#home-section">home</a></li>
+            <li><a href="#projects-section">projects</a></li>
+            <li><a href="#contact-section">contact</a></li>
           </ul>
         </nav>
       </header>
@@ -25,9 +25,40 @@
         <div class="intro">
           <div class="intro-text">
             <p>Hello, I'm <span>Utsav</span></p>
-            <p>Software Engineer - Fullstack</p>
+            <p>Fullstack Software Engineer</p>
           </div>
-          <button class="intro-btn">about me</button>
+          <a class="intro-btn" href="#projects-section">projects</a>
+        </div>
+        <div class="skills">
+          <ul class="skills-list">
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">Javascript</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">TypeScript</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">React</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">Java</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">Kubernetes</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">Python</div>
+            </li>
+            <li>
+              <div class="hex-grid-content">postgres</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">Angular</div>
+            </li>
+            <li class="hex-grid-item">
+              <div class="hex-grid-content">Vue</div>
+            </li>
+          </ul>
         </div>
       </section>
       <!-- ABOUT ME -->
@@ -40,57 +71,10 @@
             </div>
             <p>
               I specialize in building data-driven, fullstack web applications
-              with a focus on geo-spatial data. I primarily work with React,
-              Javascript, Typescript, JAVA and Python. In my current role I am
-              responsible for:
+              with a focus on geospatial data. I primarily work with React,
+              Javascript, Typescript, Java and Python. Experience working with
+              Kubernetes and docker.
             </p>
-            <ul>
-              <li>Frontend React, Typescript, Javascript</li>
-              <li>RESTful APIs, JAVA, OOP, RabbitMQ</li>
-              <li>Map stuff with Leaflet, other map stuff</li>
-              <li>Containerization and Orchestration, docker, Kubernetes</li>
-            </ul>
-          </div>
-          <div class="skills">
-            <ul class="skills-list">
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">Javascript</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">TypeScript</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">React</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">Angular</div>
-              </li>
-
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">Vue</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">Java</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">.NET</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">Kubernetes</div>
-              </li>
-              <li class="hex-grid-item">
-                <div class="hex-grid-content">Python</div>
-              </li>
-              <li>
-                <div class="hex-grid-content">Leaflet</div>
-              </li>
-              <li>
-                <div class="hex-grid-content">postgres</div>
-              </li>
-              <li>
-                <div class="hex-grid-content">OpenLayers</div>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -136,7 +120,7 @@
       </section>
       <!-- contact form -->
       <section id="contact-section">
-        <h1>CONTACT FORM</h1>
+        <h1>Leave a Message!</h1>
         <form class="contact-form" action="contact.php" method="post">
           <div class="form-control">
             <label for="name">Name</label>
@@ -171,42 +155,14 @@
           </div>
           <button class="form-button" type="submit">Submit</button>
         </form>
-        <div class="greeting-toolbar">
-          <div class="greeting-buttons">
-            <button
-              class="btn btn-color-2"
-              onclick="window.open('./assets/Utsav_Kafley_Resume.pdf')"
-            >
-              Resume
-            </button>
-            <button
-              class="btn btn-color-1"
-              onclick="location.href='./#contact'"
-            >
-              Contact
-            </button>
-          </div>
-          <div class="greeting-links">
-            <img
-              src="./assets/linkedin.png"
-              alt="Utsav Kafley LinkedIn Profile"
-              class="greeting-dev-icons { height: 40px; }"
-              onclick="window.open('https://www.linkedin.com/in/utsav-kafley/')"
-              ,
-              _blank)
-            />
-            <img
-              src="./assets/github.png"
-              alt="Utsav Kafley Github"
-              class="greeting-dev-icons { height: 40px; }"
-              onclick="window.open('https://github.com/utsavkafley')"
-              ,
-              _blank)
-            />
-          </div>
-        </div>
       </section>
       <!-- FOOTER -->
+       <footer>
+        <p>Utsav Kafley 2024.</p>
+        <div class="social-media-icons">
+          <a href="#"><img src="assets/github.png" alt="github"></a>
+          <a href="#"><img src="assets/linkedin.png" alt="linkedin"></a>
+       </footer>
     </div>
     <script src="script.js"></script>
   </body>

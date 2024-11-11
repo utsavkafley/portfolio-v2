@@ -26,7 +26,7 @@ ul {
   --light: #d3d9d4;
   --dark: #212a31;
   --primary: #da4319;
-  --secondary: #4f7cac;
+  --secondary: #708397;
   --tertiary: #2e3944;
 }
 
@@ -37,8 +37,8 @@ ul {
   flex-direction: column;
   gap: 20px;
 }
-/************************* HEADER **********************/
 
+/************************* HEADER **********************/
 header {
   display: flex;
   justify-content: space-between;
@@ -52,6 +52,7 @@ header {
 
 .nav-links {
   /* border: 2px solid purple; */
+  margin-top: 10%;
   display: flex;
   align-items: flex-end;
 }
@@ -96,7 +97,9 @@ section h1 {
 
 /************************* HOME-SECTION **********************/
 #home-section {
-  height: 90vh;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
 }
 .intro {
   /* border: 2px solid purple; */
@@ -108,7 +111,7 @@ section h1 {
 }
 
 .intro-text p {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .intro-text span {
@@ -146,6 +149,7 @@ section h1 {
 #about-section {
   display: flex;
   flex-direction: column;
+  height: 45vh;
   /* border: 2px solid red; */
 }
 
@@ -196,6 +200,7 @@ section h1 {
   background-color: var(--tertiary);
   height: 100px;
   width: 100px;
+  padding: 10px;
 }
 
 /* ****************PROJECTS*************************** */
@@ -206,30 +211,12 @@ section h1 {
   gap: 20px;
   margin-top: 20px;
 }
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 40px;
-}
-
-.projects-grid div {
-  display: flex;
-}
-
-.projects-grid h1 {
-  font-size: 1.5rem;
-  color: #d3d9d4;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .project {
+  display: flex;
   position: relative;
-  max-width: 60em;
-  margin-left: 400px;
-  margin-top: 100px;
-  height: 40vh;
+  height: 50vh;
+  width: 80%;
+  margin: 80px auto;
 }
 
 .project-img {
@@ -241,14 +228,28 @@ section h1 {
 
 .project-shape {
   position: absolute;
-  height: 30em;
-  width: 45em;
+  height: 51vh;
+  width: 100%;
   background-color: var(--secondary);
-  top: 12%;
-  left: 12%;
-  transform: rotate(-1.3deg);
+  top: -3%;
+  left: -2%;
+  transform: rotate(-1deg);
   z-index: 1;
 }
+
+.project:hover > .project-shape {
+  width: 95%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotate(-0deg);
+  transition: ease-out 0.3s;
+}
+.project:hover {
+  border: 5px solid var(--secondary);
+  transition: ease-out 0.3s;
+}
+
 /* **********************CONTACT FORM*********************************** */
 #contact-section {
   display: flex;
@@ -258,9 +259,7 @@ section h1 {
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  margin: 0 auto;
   width: 60%;
 }
 
@@ -296,9 +295,24 @@ section h1 {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
+  margin-top: 10px;
   color: whitesmoke;
   font-size: medium;
   width: 20%;
+}
+
+/* **********************FOOTER*********************************** */
+footer {
+  background-color: var(--secondary);
+  color: var(--tertiary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  gap: 10px;
+}
+footer img {
+  height: 40px;
 }
 
 /* ***************************MOBILE********************/
