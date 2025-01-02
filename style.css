@@ -12,7 +12,7 @@ html {
 body {
   --light: #d3d9d4;
   --dark: #212a31;
-  --primary: #da4319;
+  --primary: #df5630;
   --secondary: #708397;
   --tertiary: #2e3944;
 }
@@ -91,7 +91,7 @@ section {
 }
 
 section h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 700;
   text-align: center;
 }
@@ -111,52 +111,25 @@ section h1 {
   gap: 20px;
 }
 
-.intro-text p {
-  font-size: 2.2rem;
-}
-
-.intro-text span {
+.intro-text h1 {
+  font-size: 3rem;
   color: var(--primary);
 }
-.intro-btn {
-  background-color: transparent;
-  border: 2px solid var(--primary);
-  padding: 10px 100px;
-  border-radius: 3px;
-  font-size: large;
-  color: var(--light);
-}
 
-.intro-btn:hover {
-  background-color: var(--primary);
-  color: white;
-  /* add transition */
-  transition: background-color 0.7s ease;
-  cursor: pointer;
-  /* add transform */
-}
-
-.greeting-links {
-  /* border: 2px solid red; */
-  display: flex;
-  gap: 2px;
-}
-
-.greeting-dev-icons {
-  height: 40px;
+.intro-text p {
+  color: var(--secondary);
+  font-size: 1.4rem;
 }
 
 /* *************************ABOUT ME******************** */
 #about-section {
   display: flex;
   flex-direction: column;
-  height: 45vh;
-  /* border: 2px solid red; */
 }
 
 .about-content {
   display: flex;
-  gap: 20px;
+  padding: 40px;
 }
 
 .about-text {
@@ -316,75 +289,156 @@ footer img {
   height: 40px;
 }
 
+/* RESPONSIVENESS */
 /* **********************WIDESCREEN*********************************** */
 @media (min-width: 1720px) {
   .container {
     max-width: 1720px;
     margin: 0 auto;
   }
-  #home-section {
-  }
 }
 
-/* ***************************MOBILE********************/
-@media (max-width: 767px) {
+/* ***************************SMALL SCREEN********************/
+@media (max-width: 1140px) {
   .container {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-  .nav-links {
-    display: none;
+    /* border: 5px solid firebrick; */
   }
 
   section {
     flex-direction: column;
     width: 100%;
+    height: fit-content;
   }
 
-  .photo {
-    /* size photo to be a portion of screen width */
-    height: 30vh;
-  }
-
-  .greeting {
-    justify-content: flex-start;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(60, 60, 60);
-  }
-
-  .greeting-text {
-    width: 100%;
-  }
-  .greeting p {
+  section h1 {
     font-size: 1.5rem;
   }
 
-  .greeting h1 {
-    font-size: 2.5rem;
+  .nav-links {
+    display: none;
   }
 
-  .projects-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .projects-grid div {
+  .intro {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     margin: 0 auto;
+    margin-top: 80px;
+  }
+
+  #about-section h1 {
+    display: none;
+  }
+  .about-text {
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .intro-text p {
+    font-size: 1rem;
+  }
+  .about-text p {
+    font-size: 1.4rem;
+  }
+  .about-me-img img {
+    height: 100px;
+  }
+
+  #about-section {
+    height: fit-content;
+  }
+
+  #home-section {
     height: auto;
   }
 
-  .contact-form {
-    width: 100%;
+  .intro {
+    margin-bottom: 40px;
   }
 
+  .skills {
+    flex-direction: row;
+  }
+
+  .project {
+    height: 35vh;
+    width: 65%;
+  }
+
+  .project-shape {
+    height: 35vh;
+  }
+
+  .contact-form {
+    width: 60%;
+  }
   .form-button {
     width: 100%;
+  }
+}
+
+/* **********************MOBILE SCREEN********************/
+@media (max-width: 750px) {
+  .container {
+    border: 5px solid deeppink;
+  }
+  section h1 {
+    font-size: 1.3rem;
+  }
+
+  .intro {
+    margin-top: 10px;
+    flex-direction: column;
+  }
+
+  .intro-text h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-content {
+    padding: 0px;
+    justify-content: center;
+  }
+
+  .about-text {
+    /* gap: 0; */
+    margin: 0;
+    width: 90%;
+  }
+
+  .about-text p {
+    font-size: 1.2rem;
+  }
+
+  .skills-list li {
+    height: 90px;
+    width: 90px;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .project {
+    height: auto;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .project-shape {
+    display: none;
+  }
+
+  #contact-section {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: 0 auto;
   }
 }
