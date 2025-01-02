@@ -382,7 +382,7 @@ footer img {
 /* **********************MOBILE SCREEN********************/
 @media (max-width: 750px) {
   .container {
-    border: 5px solid deeppink;
+    /* border: 5px solid deeppink; */
   }
   section h1 {
     font-size: 1.3rem;
