@@ -91,7 +91,7 @@
             I'm a software engineer at BAE Systems building data-driven, fullstack web applications
             with a focus on GeoSpatial data. I primarily use React,
             Javascript, Typescript, Java and Python. I also have experience with containerization technologies like
-            Kubernetes for orchestrating microservices and managing containerized deployments across cloud environments.
+            Kubernetes for orchestrating microservices and managing deployments across cloud environments.
             <a class="about_cursor">_</a>
           </p>
         </div>
@@ -99,9 +99,9 @@
 
 
       <script>
-        const map = L.map("map").setView([26.810007, 88.262672], 10);
+        const map = L.map("map").setView([26.655052, 88.136253], 9);
 
-        L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.{ext}', {
+        L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}@2x.png', {
           minZoom: 0,
           maxZoom: 20,
           attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
