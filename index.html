@@ -13,6 +13,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
   <!-- LEAFLET -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -23,9 +24,6 @@
 </head>
 
 <body>
-
-
-
   <div class="container">
 
     <header>
@@ -42,8 +40,8 @@
     <!-- HOME -->
     <section id="home-section">
       <div class="intro">
-        <div class="about-me-img">
-          <img src="assets/profile.png" alt="utsav" height="200px" />
+        <div class="profile-pic">
+          <img src="assets/headshot2.jpg" alt="utsav" />
         </div>
         <div class="intro-text">
           <h1>Hi! I'm <span class="firstname">Utsav</span></h1>
@@ -53,31 +51,40 @@
       <div class="skills">
         <ul class="skills-list">
           <li class="hex-grid-item">
-            Javascript
+            <span>Javascript</span>
+            <i class="devicon-javascript-plain"></i>
           </li>
           <li class="hex-grid-item">
-            TypeScript
+            <span>Typescript</span>
+            <i class="devicon-typescript-plain"></i>
           </li>
           <li class="hex-grid-item">
-            React
+            <span>React</span>
+            <i class="devicon-react-plain"></i>
           </li>
           <li class="hex-grid-item">
-            Java
+            <span>Java</span>
+            <i class="devicon-java-plain"></i>
           </li>
           <li class="hex-grid-item">
-            Kubernetes
+            <span>Python</span>
+            <i class="devicon-python-plain"></i>
           </li>
           <li class="hex-grid-item">
-            Python
+            <span>Kubernetes</span>
+            <i class="devicon-kubernetes-plain"></i>
           </li>
           <li>
-            PostgreSQL
+            <span>PostgreSQL</span>
+            <i class="devicon-postgresql-plain"></i>
           </li>
           <li class="hex-grid-item">
-            Angular
+            <span>Angular</span>
+            <i class="devicon-angularjs-plain"></i>
           </li>
           <li class="hex-grid-item">
-            Vue
+            <span>Vue</span>
+            <i class="devicon-vuejs-plain"></i>
           </li>
         </ul>
       </div>
@@ -86,7 +93,6 @@
     <section id="about-section">
       <h1>ABOUT ME</h1>
       <div class="about-content">
-        <div class="about-map" id="map"></div>
         <div class="about-text">
           <p>
             I'm a software engineer at BAE Systems building data-driven, fullstack web applications
@@ -96,9 +102,41 @@
             <a class="about_cursor">_</a>
           </p>
         </div>
+        <div class="about-map" id="map"></div>
       </div>
       <script>
-        const map = L.map("map").setView([26.655052, 88.136253], 9);
+        // Define preset locations
+        const locations = [
+          {
+            name: "Mechinagar",
+            coordinates: [26.655052, 88.136253],
+          },
+          {
+            name: "Kathmandu",
+            coordinates: [27.7000, 85.3167],
+          },
+          {
+            name: "Okinawa",
+            coordinates: [26.33583, 127.80139],
+          },
+          {
+            name: "State College",
+            coordinates: [40.79339000, -77.86000000],
+          },
+          {
+            name: "Raleigh",
+            coordinates: [35.787743, -78.644257],
+          },
+
+        ];
+
+        const map = L.map("map").setView(locations[0].coordinates, 6);
+        let circle = L.circle(locations[0].coordinates, {
+          color: '#ff0000',
+          fillColor: '#ff0000',
+          fillOpacity: 1,
+          radius: 10000
+        }).addTo(map);
 
         L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_terrain/{z}/{x}/{y}@2x.png', {
           minZoom: 0,
@@ -107,15 +145,17 @@
           ext: 'png'
         }).addTo(map);
 
-        // Circle Marker
-        let circle = L.circle([26.6492,
-          88.1438], {
-          color: 'red',
-          fillColor: '#f03',
-          fillOpacity: 0.1,
-          radius: 2500
-        }).addTo(map);
+        // Initialize index to 0
+        let currentIndex = 0;
 
+        // Add click event listener to map
+        map.on("click", () => {
+          // Increment index, wrapping around to 0 if necessary
+          currentIndex = (currentIndex + 1) % locations.length;
+          // Set map view to new location
+          map.setView(locations[currentIndex].coordinates, 6);
+          circle.setLatLng(locations[currentIndex].coordinates);
+        });
       </script>
     </section>
     <!-- PROJECTS -->
@@ -123,22 +163,14 @@
       <h1>PROJECTS</h1>
       <div class="projects-grid">
         <div class="project">
-          <img class="project-img" src="./assets/bookish.png" alt="" />
+          <img class="project-img" src="./assets/jcyardservices.png" alt="" />
           <div class="project-overlay">
-            <p>Bookism</p>
+            <p>JC Yard Services</p>
             <div class="project-icons">
-              <a href="#"><img class="project-icon" src="assets/github.png" alt="github"></a>
-              <a href="#"><img class="project-icon" src="assets/launch.png" alt="Bookish.com"></a>
-            </div>
-          </div>
-        </div>
-        <div class="project">
-          <img class="project-img" src="./assets/map-project.png" alt="" />
-          <div class="project-overlay">
-            <p>Travelist</p>
-            <div class="project-icons">
-              <a href="#"><img class="project-icon" src="assets/github.png" alt="github"></a>
-              <a href="#"><img class="project-icon" src="assets/launch.png" alt="Bookish.com"></a>
+              <a href="https://github.com/utsavkafley/npfinder" target="_blank"><img class="project-icon"
+                  src="assets/github.png" alt="github"></a>
+              <a href="https://jcyardservices.vercel.app/" target="_blank"><img class="project-icon"
+                  src="assets/launch.png" alt="Bookish.com"></a>
             </div>
           </div>
         </div>
@@ -157,12 +189,33 @@
           </div>
         </div>
         <div class="project">
+          <img class="project-img" src="./assets/bookish.png" alt="" />
+          <div class="project-overlay">
+            <p>Bookism</p>
+            <div class="project-icons">
+              <a href="#" target="_blank"><img class="project-icon" src="assets/github.png" alt="github"></a>
+              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="Bookish.com"></a>
+            </div>
+          </div>
+        </div>
+        <div class="project">
+          <img class="project-img" src="./assets/map-project.png" alt="" />
+          <div class="project-overlay">
+            <p>Travelist</p>
+            <div class="project-icons">
+              <a href="#" target="_blank"><img class="project-icon" src="assets/github.png" alt="github"></a>
+              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="Bookish.com"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
           <img class="project-img" src="./assets/tool-library.png" alt="" />
           <div class="project-overlay">
             <p>MutoolAid</p>
             <div class="project-icons">
-              <a href="#"><img class="project-icon" src="assets/github.png" alt="github"></a>
-              <a href="#"><img class="project-icon" src="assets/launch.png" alt="Bookish.com"></a>
+              <a href="#" target="_blank"><img class="project-icon" src="assets/github.png" alt="github"></a>
+              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="Bookish.com"></a>
             </div>
           </div>
         </div>
