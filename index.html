@@ -6,281 +6,272 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Utsav Kafley | Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="mediaqueries.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-
-  <!-- LEAFLET -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </head>
 
 <body>
+  <div class="dotted-bg"></div>
   <div class="container">
     <nav class="nav-links">
       <ul>
         <li><a href="#home-section">home</a></li>
+        <li><a href="#about-section">about</a></li>
+        <li><a href="#resume-section">resume</a></li>
         <li><a href="#projects-section">projects</a></li>
         <li><a href="#contact-section">contact</a></li>
       </ul>
     </nav>
+
     <!-- HOME -->
     <section id="home-section">
       <div class="intro">
         <div class="intro-text">
-          <h1>Hi! I'm <span class="firstname">Utsav</span></h1>
+          <h1>Hi, I'm <span class="firstname">Utsav</span></h1>
           <p>Fullstack Software Engineer</p>
         </div>
-      </div>
-      <div class="skills">
-        <ul class="skills-list">
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-javascript-plain"></i></span>
-            <span class="colored"><i class="devicon-javascript-plain colored"></i></span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-typescript-plain"></i></span>
-            <span class="colored"><i class="devicon-typescript-plain colored"></i></span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-java-plain"></i> </span>
-            <span class="colored"><i class="devicon-java-plain colored"></i> </span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-react-plain"></i> </span>
-            <span class="colored"><i class="devicon-react-plain colored"></i> </span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-angularjs-plain"></i> </span>
-            <span class="colored"><i class="devicon-angularjs-plain colored"></i> </span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-vuejs-plain"></i> </span>
-            <span class="colored"><i class="devicon-vuejs-plain colored"></i> </span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-python-plain"></i> </span>
-            <span class="colored"><i class="devicon-python-plain colored"></i> </span>
-          </li>
-          <li class="hex-grid-item">
-            <span class="plain"><i class="devicon-kubernetes-plain"></i></span>
-            <span class="colored"><i class="devicon-kubernetes-plain colored"></i></span>
-          </li>
-          <li>
-            <span class="plain"><i class="devicon-postgresql-plain"></i> </span>
-            <span class="colored"><i class="devicon-postgresql-plain colored"></i></span>
-          </li>
-
-        </ul>
+        <div class="hero-animation">
+          <div class="terminal">
+            <div class="terminal-bar">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+            </div>
+            <div class="terminal-body">
+              <div class="term-line line1"><span class="term-prompt">~</span> <span class="term-cmd">const</span> <span class="term-var">utsav</span> = {</div>
+              <div class="term-line line2">&nbsp;&nbsp;<span class="term-key">role</span>: <span class="term-str">"fullstack engineer"</span>,</div>
+              <div class="term-line line3">&nbsp;&nbsp;<span class="term-key">stack</span>: [<span class="term-str">"vue"</span>, <span class="term-str">"react"</span>, <span class="term-str">"python"</span>],</div>
+              <div class="term-line line4">&nbsp;&nbsp;<span class="term-key">loves</span>: [<span class="term-str">"soccer"</span>, <span class="term-str">"guitar"</span>, <span class="term-str">"building things"</span>],</div>
+              <div class="term-line line5">&nbsp;&nbsp;<span class="term-key">coffee</span>: <span class="term-str">"while(true) { sip() }"</span>,</div>
+              <div class="term-line line6">};</div>
+              <div class="term-line line7"><span class="term-cursor">_</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
     <!-- ABOUT ME -->
     <section id="about-section">
-      <h1>ABOUT ME</h1>
-      <div class="about-content">
+      <h1>About</h1>
+      <div class="glass-card about-content">
         <p>
-          <img src="./assets/headshot.jpg" alt="Utsav Kafley Headshot" />
-          I'm a software engineer at BAE Systems where I build data-driven,
-          fullstack web applications with a focus on geospatial data. I write frontend code in React, Javascript,
-          Typescript. Create backend services in Java and Python. I
-          also have experience with containerization technologies like
-          Kubernetes and Docker for orchestrating microservices and managing
-          deployments across cloud environments.<br /><br />
-
-          When I'm away from the keyboard, I'm either noodling on my guitar, playing soccer or enjoying a good book.
-          <a class="about_cursor">_</a>
+          I'm a fullstack software engineer with experience building production applications across the stack.
+          Most recently at Pendo, I built customer-facing features in Vue.js and JavaScript
+          and designed AI-powered agents in Python using LangGraph to automate in-product workflows.
+          Before that at BAE Systems, I developed geospatial solutions in React, TypeScript, Java, and Python
+          for defense and intelligence customers, and led adoption of RabbitMQ for real-time data streaming.
+          I also have experience with containerization technologies like Kubernetes and Docker,
+          and CI/CD pipelines across AWS and Azure.
         </p>
-
+        <p>
+          When I'm away from the keyboard, I'm either noodling on my guitar, playing soccer or enjoying a good book.
+        </p>
       </div>
-      <div class="map-container">
-        <div id="map">
-        </div>
-        <p id="map-description"></p>
-
-      </div>
-      <script>
-        // Define preset locations
-        const locations = [
-          {
-            name: "Mechinagar",
-            coordinates: [26.655052, 88.136253],
-            description: "My birthplace, I grew up in a small village on the eastern border of Nepal."
-          },
-          {
-            name: "Kathmandu",
-            coordinates: [27.7, 85.3167],
-            description: "The capital city of Nepal, I attended school and spent latter parts of my childhood here."
-          },
-          {
-            name: "Okinawa",
-            coordinates: [26.33583, 127.80139],
-            description: "A small island in Japan, I spent two years here while stationed with the United States Air Force."
-          },
-          {
-            name: "State College",
-            coordinates: [40.79339, -77.86],
-            description: "A vibrant little town home to Penn State, I finished my undergrad here."
-          },
-          {
-            name: "Raleigh",
-            coordinates: [35.787743, -78.644257],
-            description: "Where I'm currently based out of, I'm currently working at BAE Systems."
-          },
-        ];
-
-        const map = L.map("map").setView(locations[0].coordinates, 6);
-        const disableMapInteraction = () => {
-          map.dragging.disable();
-          map.touchZoom.disable();
-          map.doubleClickZoom.disable();
-          map.scrollWheelZoom.disable();
-        }
-
-        const enableMapInteraction = () => {
-          map.dragging.enable();
-          map.touchZoom.enable();
-          map.doubleClickZoom.enable();
-          map.scrollWheelZoom.enable();
-        }
-
-        const updateMapDescription = () => {
-          const location = locations[currentIndex].name;
-          const description = locations[currentIndex].description;
-          mapDescription.textContent = `${location}: ${description}`;
-        }
-
-
-
-        let circle = L.circle(locations[0].coordinates, {
-          color: "#ff2233",
-          fillColor: "#ff000033",
-          fillOpacity: 1,
-          radius: 10000,
-        }).addTo(map);
-
-        L.tileLayer(
-          'https://tiles.stadiamaps.com/tiles/stamen_toner_lite/{z}/{x}/{y}{r}.{ext}', {
-          minZoom: 0,
-          maxZoom: 20,
-          attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-          ext: 'png'
-        }).addTo(map);
-
-        // Initialize index to 0
-        let currentIndex = 0;
-
-        // Add click event listener to map
-        map.on("click", () => {
-          // Increment index, wrapping around to 0 if necessary
-          currentIndex = (currentIndex + 1) % locations.length;
-          // Set map view to new location
-          map.setView(locations[currentIndex].coordinates, 6);
-          circle.setLatLng(locations[currentIndex].coordinates);
-          updateMapDescription();
-          enableMapInteraction();
-        });
-
-        const mapContainer = document.getElementById('map');
-        const mapDescription = document.getElementById('map-description');
-
-        mapContainer.addEventListener('mouseleave', disableMapInteraction);
-
-        updateMapDescription();
-        disableMapInteraction();
-
-
-      </script>
     </section>
+
+    <!-- RESUME -->
+    <section id="resume-section">
+      <h1>Resume</h1>
+      <div class="glass-card resume-content">
+        <div class="resume-header">
+          <a href="assets/Utsav_Kafley_Resume.pdf" target="_blank" class="resume-download">Download PDF</a>
+        </div>
+
+        <div class="resume-block">
+          <h2>Experience</h2>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="resume-company">Pendo</p>
+              </div>
+              <span class="resume-date">Apr 2025 - Apr 2026</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Built and shipped customer-facing features in Vue.js and JavaScript, collaborating with design and product to deliver responsive, accessible UI components.</li>
+              <li>Designed and implemented an AI agent in Python using LangGraph, orchestrating multi-step tool-calling workflows to automate in-product user guidance tasks.</li>
+              <li>Integrated the agent with FE via streaming APIs, reducing manual workflow time for end users.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <p class="resume-company">BAE Systems</p>
+              </div>
+              <span class="resume-date">Jun 2023 - Apr 2025</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Developed geospatial solutions in JavaScript, TypeScript, React, and Redux for defense, intelligence, and homeland security customers.</li>
+              <li>Built web services and RESTful APIs in Java and Python, containerized with Docker and deployed via Kubernetes.</li>
+              <li>Led adoption of RabbitMQ for live geospatial data streaming, using web workers and Protocol Buffers to cut latency.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <div>
+                <h3>Software Engineer Intern</h3>
+                <p class="resume-company">XPO Logistics</p>
+              </div>
+              <span class="resume-date">May 2022 - Aug 2022</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Built user-facing features in JavaScript, Angular, and RxJS against .NET RESTful APIs and MySQL.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <div>
+                <h3>Software Engineer Intern</h3>
+                <p class="resume-company">Humana</p>
+              </div>
+              <span class="resume-date">May 2021 - Aug 2021</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Shipped user-facing features in TypeScript and Vue.js with TDD (Jest, Cypress), and contributed to .NET backend services.</li>
+            </ul>
+          </div>
+
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <div>
+                <h3>Supply and Logistics Management</h3>
+                <p class="resume-company">U.S. Air Force</p>
+              </div>
+              <span class="resume-date">Mar 2015 - Jun 2020</span>
+            </div>
+            <ul class="resume-bullets">
+              <li>Oversaw daily shift operations in an aircraft maintenance unit, providing logistics support to 20+ aircraft, aircrew, and ground technicians.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h2>Skills</h2>
+          <div class="resume-skills">
+            <div class="skill-group">
+              <span class="skill-label">Languages</span>
+              <span>JavaScript, TypeScript, Python, Java, SQL</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Frontend</span>
+              <span>Vue.js, React, Redux, Angular, RxJS</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Backend</span>
+              <span>Node.js, .NET, RESTful APIs, RabbitMQ, Protocol Buffers</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Cloud & DevOps</span>
+              <span>AWS, Azure, Docker, Kubernetes, CI/CD</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">AI/ML</span>
+              <span>LangGraph, LLM tool-calling, agentic workflows</span>
+            </div>
+            <div class="skill-group">
+              <span class="skill-label">Testing</span>
+              <span>Jest, Cypress, Playwright, TDD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h2>Education</h2>
+          <div class="resume-entry">
+            <div class="resume-entry-header">
+              <div>
+                <h3>Computer Science, B.S.</h3>
+                <p class="resume-company">Pennsylvania State University</p>
+              </div>
+              <span class="resume-date">May 2020 - May 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects-section">
-      <h1>PROJECTS</h1>
+      <h1>Projects</h1>
       <div class="projects-grid">
-        <div class="project">
-          <img class="project-img" src="./assets/jcyardservices.png" alt="" />
-          <div class="project-overlay">
-            <p>JC Yard Services</p>
+        <div class="glass-card project">
+          <img class="project-img" src="./assets/jcyardservices.png" alt="JC Yard Services" />
+          <div class="project-info">
+            <p class="project-name">JC Yard Services</p>
             <div class="project-icons">
               <a href="https://github.com/utsavkafley/npfinder" target="_blank"><img class="project-icon"
                   src="assets/github.png" alt="github" /></a>
               <a href="https://jcyardservices.vercel.app/" target="_blank"><img class="project-icon"
-                  src="assets/launch.png" alt="Bookish.com" /></a>
+                  src="assets/launch.png" alt="launch" /></a>
             </div>
           </div>
         </div>
-        <div class="project">
-          <img class="project-img" src="./assets/npfinder.png" alt="" />
-          <div class="project-overlay">
-            <p>Parkfinder</p>
-            <!-- a href that opens on a separate tab-->
-
+        <div class="glass-card project">
+          <img class="project-img" src="./assets/npfinder.png" alt="Parkfinder" />
+          <div class="project-info">
+            <p class="project-name">Parkfinder</p>
             <div class="project-icons">
               <a href="https://github.com/utsavkafley/npfinder" target="_blank"><img class="project-icon"
                   src="assets/github.png" alt="github" /></a>
               <a href="https://npfinder.vercel.app/" target="_blank"><img class="project-icon" src="assets/launch.png"
-                  alt="Bookish.com" /></a>
+                  alt="launch" /></a>
             </div>
           </div>
         </div>
-        <div class="project">
-          <img class="project-img" src="./assets/bookish.png" alt="" />
-          <div class="project-overlay">
-            <p>Bookism</p>
+        <div class="glass-card project">
+          <img class="project-img" src="./assets/bookish.png" alt="Bookism" />
+          <div class="project-info">
+            <p class="project-name">Bookism</p>
             <div class="project-icons">
               <a href="#" target="_blank"><img class="project-icon" src="assets/github.png" alt="github" /></a>
-              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="Bookish.com" /></a>
+              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="launch" /></a>
             </div>
           </div>
         </div>
-        <div class="project">
-          <img class="project-img" src="./assets/map-project.png" alt="" />
-          <div class="project-overlay">
-            <p>Travelist</p>
+        <div class="glass-card project">
+          <img class="project-img" src="./assets/tool-library.png" alt="MutoolAid" />
+          <div class="project-info">
+            <p class="project-name">MutoolAid</p>
             <div class="project-icons">
               <a href="#" target="_blank"><img class="project-icon" src="assets/github.png" alt="github" /></a>
-              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="Bookish.com" /></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="project">
-          <img class="project-img" src="./assets/tool-library.png" alt="" />
-          <div class="project-overlay">
-            <p>MutoolAid</p>
-            <div class="project-icons">
-              <a href="#" target="_blank"><img class="project-icon" src="assets/github.png" alt="github" /></a>
-              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="Bookish.com" /></a>
+              <a href="#" target="_blank"><img class="project-icon" src="assets/launch.png" alt="launch" /></a>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <!-- contact form -->
+
+    <!-- CONTACT -->
     <section id="contact-section">
-      <h1>CONTACT</h1>
-      <form class="contact-form" action="contact.php" method="post">
+      <h1>Contact</h1>
+      <form class="glass-card contact-form" action="contact.php" method="post">
         <div class="form-control">
-          <input type="text" id="name" name="name" placeholder="John Doe" required />
+          <input type="text" id="name" name="name" placeholder="Name" required />
         </div>
         <div class="form-control">
-          <input type="email" id="email" name="email" placeholder="someone@example.com" required />
+          <input type="email" id="email" name="email" placeholder="Email" required />
         </div>
         <div class="form-control">
-          <textarea id="message" name="message" cols="30" rows="7" placeholder="Your message here..."
+          <textarea id="message" name="message" cols="30" rows="6" placeholder="Message"
             required></textarea>
         </div>
-        <button class="form-button" type="submit">Submit</button>
+        <button class="form-button" type="submit">Send</button>
       </form>
     </section>
+
     <!-- FOOTER -->
     <footer>
-      <p>Utsav Kafley 2025</p>
+      <p>Utsav Kafley 2026</p>
       <div class="social-media-icons">
         <a href="https://github.com/utsavkafley?tab=repositories"><img src="assets/github.png" alt="github" /></a>
         <a href="https://www.linkedin.com/in/utsav-kafley/"><img src="assets/linkedin.png" alt="linkedin" /></a>
